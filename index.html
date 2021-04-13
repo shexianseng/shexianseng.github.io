@@ -1,54 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>观鸟网</title>
-    <link href="https://fonts.googleapis.com/css?family=Long+Cang|Noto+Sans+SC:300" rel="stylesheet">
-    <link rel="stylesheet" href="/styles/style.css">
-
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-        <![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/dyselect.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>观鸟网</h1>
-        <img src="/images/dove.png" alt="一张鸽子剪影图片">
-        <nav>
-            <ul>
-                <li><span>主页</span></li>
-                <li><a href="#">开始</a></li>
-                <li><a href="#">图片</a></li>
-                <li><a href="#">设备</a></li>
-                <li><a href="#">论坛</a></li>
-            </ul>
-        </nav>
-
-    </header>
-    <main>
-
-        <article>
-            <h2>欢迎</h2>
-
-            <p>欢迎访问观鸟网虚拟站点。如果这是一个真实的网站，那么它就是观鸟爱好者的理想聚集地。无论你是一名期望学习观鸟知识的新手，还是一位希望分享体会、经验和图片的观鸟老手。</p>
-            <p>时不我待！赶快带齐装备，关上电脑，去拥抱美丽的大自然吧！</p>
-        </article>
-        <aside>
-            <h2>收藏照片</h2>
-
-            <a href="/images/favorite-1.jpg"><img src="/images/favorite-1_th.jpg" alt="一只体型小巧的鸟，羽毛蓝绿色，爪黑白相间，黑色的喙细且锋利。点击缩略图查看完整照片。"></a>
-            <a href="/images/favorite-2.jpg"><img src="/images/favorite-2_th.jpg" alt="一只美丽的孔雀的上半身图片，它的颈上覆盖蓝色的羽毛，有浅色的喙和蓝色的冠。点击缩略图查看完整照片。"></a>
-            <a href="/images/favorite-3.jpg"><img src="/images/favorite-3_th.jpg" alt="一只大鸟的上半身图片，羽毛白色，浅色的喙细长而弯曲。点击缩略图查看完整照片。"></a>
-            <a href="/images/favorite-4.jpg"><img src="/images/favorite-4_th.jpg" alt="一只成年鹈鹕，羽毛大多为白色，背部和腹部有少许黑色羽毛，又长又直的喙呈黄色，喙的下方有一个喉囊可以暂时储存食物。点击缩略图查看完整照片。"></a>
-
-        </aside>
-    </main>
-    <footer>
-        <p>本虚拟站点遵守 CC0 协议，所有内容均可任意修改和复用。原始版本由 Chris Mills 于 2016 年编写。Roy Tian 于 2019 年汉化。</p>
-        <p><a href="http://game-icons.net/lorc/originals/dove.html">鸽子图标</a> 由 Lorc 绘制。</p>
-    </footer>
+    <div class="box">
+        <div class="nav">
+            <a><img src="./images/sm.png" alt=""></a>
+            <select>
+                <option value ="volvo">所有公司</option>
+                <option value ="saab">冰雪网络科技有限公司</option>
+                <option value="opel">冰雪网络科技有限公司</option>
+                <option value="audi">冰雪网络科技有限公司</option>
+              </select>
+            <a><img src="./images/ss.png" alt=""></a>
+        </div>
+        <ul class="orders-list">
+            <li>
+                <h2><a href="#">小保当煤矿-冰雪网络科技有限公司</a></h2>
+                <div class="place">
+                    <div class="starting ">
+                        <h3>陕西省-榆林市-神木市</h3>
+                        <h4>小保当煤矿</h4>
+                    </div>
+                    <div class="Destination">
+                        <h3>山西省-吕梁市-兴县</h3>
+                        <h4>小保当煤矿</h4>
+                    </div>
+                    <div class="xian"></div>
+                </div>
+                <ul class="orders-gs">
+                    <li>
+                        <h3>发布公司</h3>
+                        <h4>陕西榆林市明辉物流有限公司</h4>
+                    </li>
+                    <li>
+                        <h3>货&emsp;&emsp;品</h3>
+                        <h4>混煤</h4>
+                    </li>
+                    <li>
+                        <h3>发布公司</h3>
+                        <h4>70.00元/吨</h4>
+                    </li>
+                </ul>
+                <a href="#" class="orders-button btn1" >接单</a>
+                <div class="bg">
+                    <div class="remind">
+                        <h3>系统提醒</h3>
+                        <p>本单需先委托收款人：刘艳</p>
+                        <a class="qd">确定</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <h2><a href="#">小保当煤矿-冰雪网络科技有限公司</a></h2>
+                <div class="place">
+                    <div class="starting ">
+                        <h3>甘肃省-兰州市-红古区</h3>
+                        <h4>小保当煤矿</h4>
+                    </div>
+                    <div class="Destination">
+                        <h3>福建省-三明市-梅列区</h3>
+                        <h4>小保当煤矿</h4>
+                    </div>
+                    <div class="xian"></div>
+                </div>
+                <ul class="orders-gs">
+                    <li>
+                        <h3>发布公司</h3>
+                        <h4>陕西榆林市明辉物流有限公司</h4>
+                    </li>
+                    <li>
+                        <h3>货&emsp;&emsp;品</h3>
+                        <h4>混煤</h4>
+                    </li>
+                    <li>
+                        <h3>发布公司</h3>
+                        <h4>70.00元/吨</h4>
+                    </li>
+                </ul>
+                <a href="#" class="orders-button btn1">接单</a>
+                <div class="bg">
+                    <div class="remind">
+                        <h3>系统提醒</h3>
+                        <p>本单需先委托收款人：刘艳1</p>
+                        <a class="qd">确定</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="orders-car">
+            <div class="select_box select_box1"></div>
+        </div>
+        <ul class="footer">
+            <li>
+                <a href="index.html" class="active">
+                    <img src="./images/zy.png" alt="">
+                    <img src="./images/zy-xz.png" alt="">
+                    <h3>资源</h3>
+                </a>
+            </li>
+            <li>
+                <a href="Firma.html">
+                    <img src="./images/yd.png" alt="">
+                    <img src="./images/yd-xz.png" alt="">
+                    <h3>运单</h3>
+                </a>
+            </li>
+            <li>
+                <a href="my.html">
+                    <img src="./images/zh.png" alt="">
+                    <img src="./images/zh-xz.png" alt="">
+                    <h3>账户</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
 </body>
 
 </html>

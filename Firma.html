@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>所有公司</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/Firma.js"></script>
+</head>
+
+<body>
+    <div class="box inspect">
+        <div class="nav firma">
+            <select>
+                <option value ="volvo">所有公司</option>
+                <option value ="saab">冰雪网络科技有限公司</option>
+                <option value="opel">冰雪网络科技有限公司</option>
+                <option value="audi">冰雪网络科技有限公司</option>
+              </select>
+        </div>
+        <ul class="firma-nav">
+            <li>
+                <a href="#">
+                    待确认
+                </a>
+
+            </li>
+            <li class="active">
+                <a href="#">
+                    待发货<i>1</i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    运输中<i>1</i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    已完成
+                </a>
+            </li>
+        </ul>
+        <ul class="firma-list">
+            <li>
+                <div class="firma-list-top">
+                    <img src="./images/book.png" alt="">
+                    <h2>九江市亿申煤业有限公司</h2>
+                </div>
+                <div class="firma-list-center">
+                    <ul class="qwdq">
+                        <li>
+                            <h2>鄂尔多斯市</h2>
+                            <h3>内蒙古自治区</h3>
+                        </li>
+                        <li>
+                            <img src="./images/jty.png" alt="">
+                        </li>
+                        <li>
+                            <h2>通辽市</h2>
+                            <h3>内蒙古自治区</h3>
+                        </li>
+                    </ul>
+                    <ul class="qwdq">
+                        <li>
+                            <h2>煤</h2>
+                            <h3>货品</h3>
+                        </li>
+                        <li>
+                            <h2>--（元）</h2>
+                            <h3>司机运价</h3>
+                        </li>
+                        <li>
+                            <h2>陕K12345</h2>
+                            <h3>车牌号</h3>
+                        </li>
+                    </ul>
+                </div>
+                <div class="firma-list-footer">
+                    <a class="qxyd">取消运单</a>
+                    <a class="zh" href="loading.html">装货</a>
+                </div>
+                <!-- 取消运单 -->
+                <div class="Cancel-bg">
+                    <div class="Cancel">
+                        <h2>取消运单</h2>
+                        <h3>是否要取消运单？</h3>
+                        <div class="Cancel-button">
+                            <a class="true">是</a>
+                            <a class="false">否</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 运输确认单 -->
+                <div class="confirmation-bg">
+                    <div class="confirmation">
+                        <h2>天盾平台运输确认单</h2>
+                        <div class="confirmation-center">
+                            <div class="confirmation-div">
+                                <h2>托运人</h2>
+                                <h3>九江市亿申煤业有限公司</h3>
+                            </div>
+                            <div class="confirmation-div">
+                                <h2>承运人</h2>
+                                <h3>湖北天盾电子技术枣阳有限公司</h3>
+                            </div>
+                            <div class="confirmation-div">
+                                <h2>实际承运人</h2>
+                                <h3>惠建龙(15129125692)</h3>
+                            </div>
+                            <ul class="confirmation-ul">
+                                <li>
+                                    <h2>货物名称</h2>
+                                    <h3>煤</h3>
+                                </li>
+                                <li>
+                                    <h2>运输方式</h2>
+                                    <h3>公路运输</h3>
+                                </li>
+                                <li>
+                                    <h2>运输价格</h2>
+                                    <h3>0</h3>
+                                </li>
+                                <li>
+                                    <h2>运价单位</h2>
+                                    <h3>元/吨</h3>
+                                </li>
+                            </ul>
+                            <div class="confirmation-div">
+                                <h2>发货公司</h2>
+                                <h3>绍兴润乾</h3>
+                            </div>
+                            <div class="confirmation-div">
+                                <h2>发货地址</h2>
+                                <h3>伊金霍洛旗隆达煤业有限责任公司</h3>
+                            </div>
+                            <div class="confirmation-div">
+                                <h2>收货公司</h2>
+                                <h3>内蒙古联晟新能源材料股份有限公司</h3>
+                            </div>
+                            <div class="confirmation-div">
+                                <h2>收货地址</h2>
+                                <h3>内蒙古联晟新能源材料股份有限公司</h3>
+                            </div>
+                            <div class="confirmation-div">
+                                <h2>收货人</h2>
+                                <h3>赵志军(13961091616)</h3>
+                            </div>
+                            <div class="jsxy confirmation-jsxy">
+                                <input type="checkbox" name="radio" id="radio">
+                                <label for="radio">同意并接受<a>《舟马物流加盟协议》</a></label>
+                            </div>
+                            <div class="confirmation-button">
+                                <a class="qx">取消</a>
+                                <a class="qr">确认</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="No-data">
+            <div></div>
+            <h3>没有更多数据了</h3>
+        </div>
+        <ul class="footer">
+            <li>
+                <a href="index.html">
+                    <img src="./images/zy.png" alt="">
+                    <img src="./images/zy-xz.png" alt="">
+                    <h3>资源</h3>
+                </a>
+            </li>
+            <li>
+                <a href="Firma.html" class="active">
+                    <img src="./images/yd.png" alt="">
+                    <img src="./images/yd-xz.png" alt="">
+                    <h3>运单</h3>
+                </a>
+            </li>
+            <li>
+                <a href="my.html">
+                    <img src="./images/zh.png" alt="">
+                    <img src="./images/zh-xz.png" alt="">
+                    <h3>账户</h3>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

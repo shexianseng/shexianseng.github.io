@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>身份认证</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/Firma.js"></script>
+</head>
+
+<body>
+    <div class="box inspect">
+        <div class="nav">
+            <a><img src="./images/left.png" alt=""></a>
+            <h2><strong>身份认证</strong></h2>
+            <a></a>
+        </div>
+        <div class="IDcard">
+            <div class="IDcard-list">
+                <h2>身份证信息</h2>
+                <ul>
+                    <li>
+                        <h2 class="IDcard-list-h2">身份证人像面</h2>
+                        <div class="IDcard-list-div upload-div">
+                            <img src="./images/sfzzm.png" alt="">
+                            <div class="img-sc">
+                                <img src="./images/xj.png" alt="">
+                                <span>图片上传</span>
+                            </div>
+                            <!-- <img onclick="deletImg(this)" src="./images/gb1.png" alt=""> -->
+                        </div>
+                        <div class="img-upload">
+                            <div class="login-bg">
+                                <div class="login">
+                                    <h2>身份证人像面</h2>
+                                    <img class="img" src="./images/sfzzm.png" alt="">
+                                    <p>1. 请尽量避免反光；</p>
+                                    <p>2. 需保证照片中文字清晰可辨认。</p>
+                                    <a class="pz"><input type="file" accept="image/*" mutiple="mutiple" capture="camera"
+                                            onchange="checkImg(this)" />
+                                        <!-- <input type="file" id="file" accept="image/*" capture> -->拍照</a>
+                                    <a class="xc"><input type="file" id="file" accept="image/*"
+                                            onchange="checkImg(this)">从相册选择</a>
+                                    <a class="gb"><img src="./images/gb.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="IDcard-list-h2">身份证国徽面</h2>
+                        <div class="IDcard-list-div upload-div">
+                            <img src="./images/sfzbm.png" alt="">
+                            <div class="img-sc">
+                                <img src="./images/xj.png" alt="">
+                                <span>图片上传</span>
+                            </div>
+                            <!-- <img onclick="deletImg(this)" src="./images/gb1.png" alt=""> -->
+                        </div>
+                        <div class="img-upload">
+                            <div class="login-bg">
+                                <div class="login">
+                                    <h2>身份证国徽面</h2>
+                                    <img class="img" src="./images/sfzbm.png" alt="">
+                                    <p>1. 请尽量避免反光；</p>
+                                    <p>2. 需保证照片中文字清晰可辨认。</p>
+                                    <a class="pz"><input type="file" accept="image/*" mutiple="mutiple" capture="camera"
+                                            onchange="checkImg(this)" />
+                                        <!-- <input type="file" id="file" accept="image/*" capture> -->拍照</a>
+                                    <a class="xc"><input type="file" id="file" accept="image/*"
+                                            onchange="checkImg(this)">从相册选择</a>
+                                    <a class="gb"><img src="./images/gb.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="IDcard-list">
+                <h2>驾驶证与从业资格证</h2>
+                <ul>
+                    <li>
+                        <h2 class="IDcard-list-h2">驾驶证主页</h2>
+                        <div class="IDcard-list-div upload-div">
+                            <img src="./images/idcard.png" alt="">
+                            <div class="img-sc">
+                                <img src="./images/xj.png" alt="">
+                                <span>图片上传</span>
+                            </div>
+                            <!-- <img onclick="deletImg(this)" src="./images/gb1.png" alt=""> -->
+                        </div>
+                        <div class="img-upload">
+                            <div class="login-bg">
+                                <div class="login">
+                                    <h2>驾驶证主页</h2>
+                                    <img class="img" src="./images/idcard.png" alt="">
+                                    <p>1. 请尽量避免反光；</p>
+                                    <p>2. 需保证照片中文字清晰可辨认。</p>
+                                    <a class="pz"><input type="file" accept="image/*" mutiple="mutiple" capture="camera"
+                                            onchange="checkImg(this)" />
+                                        <!-- <input type="file" id="file" accept="image/*" capture> -->拍照</a>
+                                    <a class="xc"><input type="file" id="file" accept="image/*"
+                                            onchange="checkImg(this)">从相册选择</a>
+                                    <a class="gb"><img src="./images/gb.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h2 class="IDcard-list-h2">从业资格证</h2>
+                        <div class="IDcard-list-div upload-div">
+                            <img src="./images/idcard.png" alt="">
+                            <div class="img-sc">
+                                <img src="./images/xj.png" alt="">
+                                <span>图片上传</span>
+                            </div>
+                            <!-- <img onclick="deletImg(this)" src="./images/gb1.png" alt=""> -->
+                        </div>
+                        <div class="img-upload">
+                            <div class="login-bg">
+                                <div class="login">
+                                    <h2>从业资格证</h2>
+                                    <img class="img" src="./images/idcard.png" alt="">
+                                    <p>1. 请尽量避免反光；</p>
+                                    <p>2. 需保证照片中文字清晰可辨认。</p>
+                                    <a class="pz"><input type="file" accept="image/*" mutiple="mutiple" capture="camera"
+                                            onchange="checkImg(this)" />
+                                        <!-- <input type="file" id="file" accept="image/*" capture> -->拍照</a>
+                                    <a class="xc"><input type="file" id="file" accept="image/*"
+                                            onchange="checkImg(this)">从相册选择</a>
+                                    <a class="gb"><img src="./images/gb.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="IDcard-list">
+                <h2>司机个人信息</h2>
+                <ul class="driver">
+                    <li>
+                        <h2 class="driver-h2">姓名</h2>
+                        <h3 class="driver-h3">刘昊然</h3>
+                    </li>
+                    <li>
+                        <h2 class="driver-h2">手机号</h2>
+                        <h3 class="driver-h3">17509143000</h3>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    // 返回
+    $('.nav a img').click(function () {
+        window.history.go(-1)
+    })
+    var file = document.querySelector('#file');
+    if (getIos()) {
+        file.removeAttribute("capture");
+    }
+    function getIos() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/iPhone\sOS/i) == "iphone os") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // 删除图片
+    function deletImg(ele) {
+        $(ele).parents(".video-center-nr").find('.video-center-img-box img').attr('src', './image/up-img.png');
+        $(ele).parents(".video-center-nr").find('input').val("");
+        $(ele).parents(".video-center-nr").removeClass('has');
+
+    }
+    // 选择图片后
+    function checkImg(ele) {
+        var fileType = verificationPicFile(ele);
+        var fileType2 = verificationPicFile2(ele);
+        if (fileType == 1 && fileType2 == 1) {
+            showImg(ele);
+        } else {
+            deletImg(ele);
+        }
+        console.log(ele)
+    }
+
+    // 显示预览图片
+    function showImg(ele) {
+        var file = $(ele)[0].files[0];    //获取文件信息
+        var imgdata = '';
+        if (file) {
+            var reader = new FileReader();  //调用FileReader
+            reader.readAsDataURL(file); //将文件读取为 DataURL(base64)
+            reader.onload = function (evt) {   //读取操作完成时触发。
+                $('.login-bg').hide()
+                $(ele).parents(".img-upload").prev().children('img:first-child').attr('src', evt.target.result)  //将img标签的src绑定为DataURL
+                $(ele).parents(".video-center-nr").addClass('has');
+                $(ele).parents(".img-upload").prev().children('.img-sc').hide()
+            };
+        }
+        else {
+            alert("上传失败");
+        }
+    }
+    //图片大小验证
+    function verificationPicFile2(file) {
+        var fileSize = 0;
+        var fileMaxSize = 10240;//10M
+        var filePath = file.value;
+        if (filePath) {
+            fileSize = file.files[0].size;
+            var size = fileSize / 1024;
+            if (size > fileMaxSize) {
+                alert("文件大小不能大于10M！");
+                file.value = "";
+                return -1;
+            } else if (size <= 0) {
+                alert("文件大小不能为0M！");
+                file.value = "";
+                return -2;
+            } else {
+                return 1;
+            }
+        } else {
+            return 0;
+        }
+    }
+    //图片类型验证
+    function verificationPicFile(file) {
+        var fileTypes = [".jpg", ".png"];
+        var filePath = file.value;
+        //当括号里面的值为0、空字符、false 、null 、undefined的时候就相当于false
+        if (filePath) {
+            var isNext = false;
+            var fileEnd = filePath.substring(filePath.indexOf("."));
+            for (var i = 0; i < fileTypes.length; i++) {
+                if (fileTypes[i] == fileEnd) {
+                    isNext = true;
+                    break;
+                }
+            }
+            if (!isNext) {
+                alert('不接受此文件类型');
+                file.value = "";
+                return -1; // 不接受此文件类型
+            } else {
+                return 1; //正确
+            }
+        } else {
+            return 0; // 未选择图片
+        }
+    }
+    $('.upload-div').click(function () {
+        $(this).next().children().show()
+    })
+    $('.gb').click(function () {
+        $(this).parents('.login-bg').hide()
+    })
+</script>

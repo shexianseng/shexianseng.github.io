@@ -1,0 +1,1619 @@
+/* 首页 */
+body{
+    margin: 0;
+}
+h1,h2,h3,h4,h5,h6,i,p,strong,a,li,ul{
+    font-size: .2rem;
+    font-style: normal;
+    color: #333;
+    text-decoration: none;
+    list-style: none;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+.box{
+    max-width: 750px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+}
+.nav{
+    height: .88rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .32rem;
+}
+.nav a{
+    display: flex;
+    align-items: center;
+}
+.nav a img{
+    width: .44rem;
+}
+.nav select{
+    border: none;
+    font-size: .36rem;
+    color: #333;
+    font-weight: bold;
+    outline: none;
+    text-align: center;
+    text-align-last: center;
+    background-color: #fff;
+}
+.nav select option{
+    font-size: .36rem;
+    color: #333;
+    text-align: center;
+}
+.nav h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .28rem;
+}
+.nav h2 strong{
+    font-size: .36rem;
+    font-weight: bold;
+}
+.orders-list{
+    background-color: #F1F1F1;
+    padding: .32rem;
+    min-height: 90vh;
+    padding-bottom: 1.1rem;
+}
+.orders-list>li{
+    background-color: #fff;
+    border-radius: .2rem;
+    margin-bottom: .32rem;
+}
+.orders-list>li h2{
+    margin-bottom: .18rem;
+    text-align: center;
+    padding: .32rem;
+}
+.orders-list>li h2 a{
+    font-size: .36rem;
+}
+.place{
+    padding: .32rem;
+    border-bottom: 1px solid #dfdfdf;
+    position: relative;
+}
+.xian{
+    width: .02rem;
+    position: absolute;
+    height: 1.4rem;
+    left: .33rem;
+    top: .5rem;
+    background-color: #dfdfdf;
+}
+.Destination{
+    padding-left: .34rem;
+}
+.starting{
+    padding-bottom: .17rem;
+    padding-left: .34rem;
+}
+.Destination h3,
+.starting h3{
+    font-size: .28rem;
+    color: #333;
+    margin-bottom: .18rem;
+    position: relative;
+}
+.starting h3::before{
+    content: '';
+    display: block;
+    width: .16rem;
+    height: .16rem;
+    background-color: #21B539;
+    position: absolute;
+    left: -.4rem;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+    z-index: 10;
+}
+.Destination h3::before{
+    content: '';
+    display: block;
+    width: .16rem;
+    height: .16rem;
+    background-color: #BB2325;
+    position: absolute;
+    left: -.4rem;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+    z-index: 10;
+}
+.Destination h4,
+.starting h4{
+    font-size: .24rem;
+    color: #333;
+    margin-bottom: .35rem;
+}
+.orders-gs{
+    padding: .32rem;
+}
+.orders-gs>li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: .32rem;  
+}  
+.orders-gs>li h3{
+    font-size: .28rem;
+    color: #999999;
+    margin-right: .48rem;
+}
+.orders-gs>li h4{
+    font-size: .28rem;
+    color: #333;
+}
+.orders-button{
+    display: block;
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    background-color: #436AA1;
+    color: #fff;
+    font-size: .28rem;
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+}
+.bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.remind{
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: .32rem;
+    border-radius: .2rem;
+    box-sizing: border-box;
+}
+.remind h3{
+    font-size: .32rem;
+    color: #333;
+    font-weight: bold;
+}
+.remind p{
+    font-size: .28rem;
+    color: #333;
+    margin-top: .18rem;
+    min-height: 1rem;
+    margin-bottom: .3rem;
+    font-weight: bold;
+}
+.qd{
+    color: #3C8D87;
+    font-size: .28rem;
+    float: right;
+    font-weight: bold;
+}
+/* 底部 */
+.footer{
+    max-width: 750px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    height: 1rem;
+    background-color: #fff;
+    z-index: 100;
+}
+.footer li{
+    float: left;
+    width: 33.33%;
+    height: 1rem;
+}
+.footer li a{
+    display: block;
+    width: 100%;
+    height: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.footer li a img{
+    height: .4rem;
+    display: block;
+    margin-bottom: .1rem;
+}
+.footer li a img:nth-child(2){
+    display: none;
+}
+.footer li a h3{
+    font-size: .22rem;
+}
+.footer li .active img:first-child{
+    display: none;
+}
+.footer li .active img:nth-child(2){
+    display: block;
+}
+.footer li .active h3{
+    color: #436AA1;
+}
+/* 资源检查 */
+.inspect .nav a img{
+    width: .2rem;
+}
+.inspect-checkbox{
+    padding: .5rem .32rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.inspect-checkbox label{
+    font-size: .28rem;
+    margin-left: .1rem;
+}
+.inspect-ul{
+    margin-bottom: .32rem;
+    padding: 0 .32rem;
+    background-color: #fff;
+}
+.inspect-ul li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 1rem;
+    border-bottom: 1px solid #dfdfdf;
+    position: relative;
+}
+.inspect-ul li:last-child{
+    border: none;
+}
+.inspect-ul li h2{
+    width: 35%;
+    font-size: .32rem;
+    font-weight: bold;
+}
+.inspect-ul li img{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+.inspect-ul li input{
+    height: .9rem;
+    border: none;
+    outline: none;
+    font-size: .32rem;
+}
+.ss{
+    display: block;
+    width: 90%;
+    text-align: center;
+    background-color: #436AA1;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    margin: .56rem auto 0;
+    color: #fff;
+    font-size: .32rem;
+    border-radius: .6rem;
+}
+.qk{
+    display: block;
+    width: 90%;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    margin: .32rem auto 0;
+    color: #333;
+    font-size: .32rem;
+    border-radius: .6rem;
+}
+/* 收款授权委托书签字 */
+.qzmb{
+    width: 90%;
+    margin: 0 auto;
+    height: 60vh;
+    margin-top: .28rem;
+    border-radius: .2rem;
+}
+fieldset{
+    width: 100%;
+    height: 100%;
+    border: none!important;
+    padding: 0!important;
+    margin: 0!important;
+}
+/* 收款授权委托书协议 */
+.xy{
+    width: 90%;
+    margin: 0 auto;
+    padding: .68rem .24rem;
+    box-sizing: border-box;
+    min-height: 70vh;
+    margin-top: .28rem;
+    border-radius: .2rem;
+    background-color: #fff;
+    position: relative;
+}
+.xy-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .1rem;
+}
+.xy-name h3{
+    min-width: 20%;
+    font-size: .28rem;
+    color: #333;
+    margin-right: .2rem;
+}
+.entrust{
+    font-size: .28rem;
+    color: #333;
+}
+.entrust h3{
+    font-size: .28rem;
+    color: #333;
+    margin-bottom: .1rem;
+}
+.entrust h2{
+    font-size: .28rem;
+    color: #333;
+    margin-bottom: .1rem;
+    text-indent: 2em;
+}
+.entrust p{
+    font-size: .28rem;
+    color: #333;
+    margin-bottom: .1rem;
+    text-indent: 2em;
+    line-height: .4rem;
+}
+.explain p{
+    font-size: .28rem;
+    color: #333;
+    margin-bottom: .1rem;
+    line-height: .4rem;
+}
+.xy-time{
+    color: #333;
+    font-size: .28rem;
+    text-align: right;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+}
+.xy .inspect-checkbox{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.inspect-checkbox input{
+    width: .26rem;
+    height: .26rem;
+}
+/* 登录 */
+.login-bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.login{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85%;
+    background-color: #fff;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    padding: .6rem .8rem 0;
+    box-sizing: border-box;
+}
+.login>h2{
+    font-size: .6rem;
+    color: #333;
+    font-weight: bold;
+}
+.login h3{
+    font-size: .3rem;
+    color: #333;
+    margin-top: .8rem;
+    margin-bottom: .6rem;
+}
+.sjh{
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #333;
+    font-size: .6rem;
+    outline: none;
+}
+.jsxy{
+    height: .6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.jsxy input{
+    display: block;
+    width: .26rem;
+    height: .26rem;
+    margin: 0;
+    padding: 0;
+}
+.jsxy label{
+    font-size: .3rem;
+    color: #999999;
+    margin-left: .1rem;
+}
+.jsxy label a{
+    color: #436aa1!important;
+    font-size: .3rem;
+    margin-left: .1rem;
+}
+.hqyzm{
+    display: block;
+    margin-top: .6rem;
+    width: 3rem;
+    height: .8rem;
+    line-height: .8rem;
+    text-align: center;
+    background-color: #436aa1;
+    border-radius: .1rem;
+    color: #fff;
+    font-size: .3rem;
+    border: none;
+}
+.gb{
+    position: absolute;
+    top: 7%;
+    right: .8rem;
+}
+.gb img{
+    height: .5rem;
+}
+/* 注册 */
+.register h3{
+    font-weight: bold;
+}
+.register h3 a{
+    color: #436aa1;
+    font-size: .3rem;
+}
+ /* 验证码框样式 */
+ .codeinput {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    border-bottom: 3px solid #333;
+}
+
+.codeinput input[type=tel] {
+    width: 25%;
+    height: 1rem;
+    text-align: center;
+    border: none;
+    font-size: .4rem;
+    box-sizing: border-box;
+    outline: none;
+}
+.codeinput i{
+    width: 2px;
+    position: relative;
+    top: 0.4rem;
+    z-index: 100;
+    height: .4rem;
+    background-color: #e6e6e6;
+}
+.codeinput input[type=tel]:last-child{
+    border-right: none;
+}
+/* 运单 */
+.firma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firma-nav{
+    background-color: #fff;
+    height: .88rem;
+}
+.firma-nav li{
+    float: left;
+    width: 25%;
+    height: .88rem;
+    border-right: 1px solid #efefef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firma-nav li a{
+    font-size: .28rem;
+    height: .88rem;
+    line-height: .88rem;
+    position: relative;
+    color: #999999;
+}
+.firma-nav li a i{
+    width: .32rem;
+    height: .32rem;
+    line-height: .32rem;
+    text-align: center;
+    background-color: #F55F4E;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -.28rem;
+    color: #fff;
+}
+.active a{
+    color: #333!important;
+    border-bottom: 3px solid #436AA1;
+}
+.No-data{
+    height: .38rem;
+    margin-top: .48rem;
+    padding: 0 .32rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.No-data div{
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid #dfdfdf;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+.No-data h3{
+    font-size: .28rem;
+    color: #999999;
+    background-color: #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 0 .2rem;
+}
+.firma-list{
+    padding: 0 .32rem;
+}
+.firma-list>li{
+    margin-top: .48rem;
+    background-color: #fff;
+    border-radius: .2rem;
+}
+.firma-list-top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: .24rem;
+    border-bottom: 1px solid #dfdfdf;
+}
+.firma-list-top img{
+    margin-right: .08rem;
+    width: .2rem;
+}
+.firma-list-top h2{
+    color: #999999;
+}
+.firma-list-center{
+    padding: .48rem .24rem 0;
+}
+.firma-list-center .qwdq:nth-child(2) li h2{
+    font-weight: bold;
+}
+.qwdq{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+}
+.qwdq li h2{
+    font-size: .36rem;
+    margin-bottom: .18rem;
+}
+.qwdq li h3{
+    font-size: .24rem;
+    color: #999999;
+}
+.qwdq li img{
+    width: .34rem;
+}
+.firma-list-footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.qxyd{
+    width: 50%;
+    background-color: #6795D5;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    border-bottom-left-radius: .2rem;
+    font-size: .28rem;
+}
+.zh{
+    width: 50%;
+    background-color: #436AA1;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    color: #fff;
+    border-bottom-right-radius: .2rem;
+    font-size: .28rem;
+}
+/* 装货 */
+.shipment {
+    background-color: #fff;
+    margin-top: .24rem;
+}
+.shipment li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .32rem;
+    height: 1rem;
+}
+.shipment li h2{
+    width: 35%;
+    font-size: .32rem;
+    color: #333;
+}
+.shipment li h3{
+    width: 50%;
+    font-size: .32rem;
+    color: #999999;
+}
+.shipment li input{
+    width: 50%;
+    height: 1rem;
+    border: none;
+    outline: none;
+    color: #999;
+    font-size: .32rem;
+}
+.shipment li h4{
+    width: 15%;
+    font-size: .32rem;
+    color: #333;
+    text-align: right;
+}
+.upload h2{
+    font-size: .24rem;
+    color: #999999;
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0 .32rem;
+}
+.loding-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.loding-button{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.loding-list{
+    border-radius: .2rem;
+}
+.loding-list li{
+    width: 95%;
+    height: .88rem;
+    line-height: .88rem;
+    background-color: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    text-align: center;
+    margin: 0 auto;
+}
+.loding-list li a{
+    display: block;
+    width: 100%;
+    font-size: .32rem;
+    color: #333333;
+}
+.loding-list li:first-child{
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+}
+.loding-list li:last-child{
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+}
+.loding-button>a{
+    display: block;
+    width: 95%;
+    height: .88rem;
+    line-height: .88rem;
+    background-color: #fff;
+    margin: .24rem auto;
+    text-align: center;
+    border-radius: .2rem;
+    font-size: .32rem;
+    color: #333;
+}
+/* 取消运单 */
+.Cancel-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.Cancel{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: .32rem;
+    border-radius: .2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.Cancel h2{
+    font-size: .32rem;
+    margin-bottom: .18rem;
+    color: #333;
+}
+.Cancel h3{
+    min-height: 1rem;
+    font-size: .32rem;
+    color: #333;
+}
+.Cancel-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Cancel-button a{
+    font-size: .28rem;
+    color: #3C8D87;
+}
+.confirmation-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.confirmation{
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: .2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.confirmation>h2{
+    width: 100%;
+    text-align: center;
+    height: .88rem;
+    line-height: .88rem;
+    font-size: .32rem;
+    background-color: #EEEEEE;
+    color: #333;
+    font-weight: bold;
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+}
+.confirmation-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 .32rem;
+    margin-bottom: .18rem;
+}
+.confirmation-div:first-child{
+    margin-top: .18rem;
+}
+.confirmation-div h2{
+    font-size: .28rem;
+    color: #333;
+    font-weight: bold;
+    width: 27%;
+}
+.confirmation-div h3{
+    width: 73%;
+    font-size: .24rem;
+    color: #666666;
+}
+.confirmation-ul{
+    padding: 0 .32rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.confirmation-ul li{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .18rem;
+}
+.confirmation-ul li h2{
+    font-size: .28rem;
+    width: 54%;
+    color: #333;
+    font-weight: bold;
+}
+.confirmation-ul li h3{
+    font-size: .24rem;
+    color: #666666;
+}
+.confirmation-jsxy{
+    height: 1rem;
+    justify-content: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.confirmation-jsxy input{
+    position: relative;
+    top: .03rem;
+}
+.confirmation-button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.qx{
+    width: 50%;
+    height: .88rem;
+    line-height: .88rem;
+    border-bottom-left-radius: .2rem;
+    font-size: .28rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+.qr{
+    width: 50%;
+    height: .88rem;
+    line-height: .88rem;
+    border-bottom-left-radius: .2rem;
+    font-size: .28rem;
+    color: #436AA1;
+    font-weight: bold;
+    text-align: center;
+}
+/* 运单详情 */
+.waybill-detail{
+    background-color: #fff;
+    margin-top: .32rem;
+}
+.waybill-detail .starting h2{
+    font-size: .36rem;
+    color: #333;
+    margin-bottom: .18rem;
+    position: relative;
+}
+.waybill-detail .Destination h2{
+    font-size: .36rem;
+    color: #333;
+    margin-bottom: .18rem;
+    position: relative;
+}
+.waybill-detail .starting h2::before{
+    content: '';
+    display: block;
+    width: .16rem;
+    height: .16rem;
+    background-color: #21B539;
+    position: absolute;
+    left: -.4rem;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+    z-index: 10;
+}
+.waybill-detail .Destination h2::before{
+    content: '';
+    display: block;
+    width: .16rem;
+    height: .16rem;
+    background-color: #BB2325;
+    position: absolute;
+    left: -.4rem;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 50%;
+    z-index: 10;
+}
+.waybill-detail .starting h3::before{
+    display: none;
+}
+.waybill-detail .Destination h3::before{
+    display: none;
+}
+.waybill-detail .xian{
+    height: 2.05rem;
+    top: 0.5rem;
+}
+.jbxx{
+    padding: 0 .32rem;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: .24rem;
+    color: #999999;
+}
+.information-list{
+    background-color: #fff;
+    padding: 0 .32rem;
+}
+.information-list li{
+    height: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.information-list li h2{
+    width: 30%;
+    font-size: .32rem;
+    color: #333;
+    font-weight: bold;
+}
+.information-list li h3{
+    font-size: .32rem;
+    color: #333;
+    font-weight: bold;
+}
+.contacts-list{
+    background-color: #fff;
+    padding: 0 .32rem;
+    height: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.contacts-list h2{
+    font-size: .32rem;
+    color: #333;
+    font-weight: bold;
+    width: 30%;
+}
+.contacts-list h3{
+    font-size: .32rem;
+    color: #333;
+    font-weight: bold;
+    width: 60%;
+}
+.contacts-list a{
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
+.contacts-list a img{
+    width: .36rem;
+}
+.information{
+    padding-bottom: 0.8rem;
+}
+/* 运单详情 */
+.information-img{
+    background-color: #fff;
+    padding: .32rem;
+}
+.information-img img{
+    width: 30%;
+    margin-right: 2%;
+    margin-bottom: .2rem;
+}
+.information-list .information-img{
+    height: auto;
+    padding: .32rem 0;
+}
+.comment{
+    background-color: #fff;
+    padding: .32rem;
+}
+.comment-xing{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .32rem;
+}
+.comment-xing a{
+    margin-right: .1rem;
+}
+.comment-xing a img{
+    width: .45rem;
+}
+.comment-text{
+    position: relative;
+}
+.comment-text textarea{
+    width: 100%;
+    border-radius: 0.1rem;
+    border: 1px solid #eee;
+    padding: .32rem .24rem;
+    resize: none;
+    outline: none;
+}
+.comment-text span{
+    position: absolute;
+    right: .1rem;
+    bottom: .2rem;
+    font-size: .24rem;
+    color: #999;
+}
+.tjpl{
+    display: block;
+    width: 3rem;
+    height: .64rem;
+    line-height: .64rem;
+    text-align: center;
+    font-size: .32rem;
+    background-color: #436AA1;
+    border-radius: .6rem;
+    color: #fff;
+    margin: 0 auto;
+    margin-top: .32rem;
+}
+/* 修改手机号 */
+.phone-list{
+    margin-top: .24rem;
+}
+.phone-list li{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 .32rem;
+    height: 1rem;
+}
+.phone-list li h2{
+    width: 25%;
+    font-size: .32rem;
+    font-weight: bold;
+    color: #333;
+}
+.phone-list li input{
+    width: 50%;
+    height: 1rem;
+    border: none;
+    outline: none;
+    font-size: .28rem;
+    color: #999999;
+}
+.phone-list li .hqyzm{
+    height: auto;
+    width: 25%;
+    background-color: #fff;
+    color: #436AA1;
+    font-size: .28rem;
+    margin-top: 0;
+    height: 1rem;
+    line-height: 1rem;
+}
+/* 我的 */
+.my-top{
+    width: 100%;
+    height: 1.66rem;
+    position: relative;
+}
+.my-top img{
+    width: 100%;
+    height: 2.66rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.my-top h2{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    font-size: .36rem;
+    color: #fff;
+    transform: translate(-50%,-50%);
+}
+.my-content{
+    padding: 0 .32rem 2.1rem;
+}
+.account{
+    background-color: #fff;
+    border-radius: 0.2rem;
+    padding: .68rem .32rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.tx{
+    border-radius: 50%;
+}
+.tx img{
+    width: 1.1rem;
+}
+.xx h2{
+    font-size: .32rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: .18rem;
+}
+.ckxx img{
+    width: .2rem;
+}
+.xx h3{
+    font-size: .24rem;
+    color: #999;
+}
+.xx h3 i{
+    color: #CB8166;
+}
+.service{
+    background-color: #fff;
+    margin-top: .32rem;
+    border-radius: .2rem;
+}
+.service>h2{
+    font-size: .28rem;
+    color: #666666;
+    height: 1rem;
+    padding: .32rem;
+    border-bottom: 1px solid #eee;
+}
+.service ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.service ul li{
+    width: 33.33%;
+    height: 2.12rem;
+}
+.service-a{
+    height: 2.12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+.service-a img{
+    width: auto;
+    height: .5rem;
+    margin-bottom: .18rem;
+}
+.service-a h2{
+    margin-bottom: .06rem;
+}
+/* 我的车辆 */
+.my-car{
+    padding: .24rem;
+}
+.my-car li{
+    background-color: #fff;
+    padding: .24rem;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: space-between;
+}
+.my-car-a{
+    width: 30%;
+}
+.my-car-a img{
+    width: 100%;
+}
+.my-car-div{
+    width: 67%;
+}
+.my-car-examine{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .44rem;
+}
+.my-car-examine h2{
+    font-size: .24rem;
+    color: #333;
+    background-color: #F7B604;
+    border: 1px solid #333;
+    padding: .1rem .24rem;
+    border-radius: .1rem;
+}
+.my-car-examine h3{
+    font-size: .24rem;
+    color: #333;
+}
+.my-car-examine h3 i{
+    width: .24rem;
+    margin-right: .05rem;
+    position: relative;
+    top: .03rem;
+}
+.my-car-modify{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-car-modify h2{
+    font-size: .28rem;
+    color: #333;
+    width: 75%;
+}
+.xg{
+    width: 25%;
+    height: .64rem;
+    padding: .12rem .24rem;
+    color: #2091D1;
+    font-size: .28rem;
+    border: 1px solid #2091D1;
+}
+.car .ss{
+    position: fixed;
+    bottom: .8rem;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.IDcard{
+    padding: 0 .32rem;
+}
+.IDcard-list{
+    background-color: #fff;
+    margin-top: .32rem;
+    border-radius: .2rem;
+}
+.IDcard-list>h2{
+    font-size: .36rem;
+    color: #333;
+    font-weight: bold;
+    height: 1rem;
+    line-height: 1rem;
+    padding-left: .32rem;
+}
+.IDcard-list ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .32rem .32rem;
+}
+.IDcard-list ul li{
+    width: 48%;
+}
+.IDcard-list-h2{
+    font-size: .24rem;
+    color: #333;
+    margin-bottom: .26rem;
+}
+.IDcard-list-div{
+    position: relative;
+    height: 1.7rem;
+}
+.IDcard-list-div>img{
+    width: 100%;
+    height: 1.7rem;
+    border-radius: 0.2rem;
+}
+.IDcard-list-div img:last-child{
+    position: absolute;
+    top: -.1rem;
+    right: .1rem;
+    width: auto;
+    height: auto;
+}
+.driver{
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.driver li{
+    width: 100%!important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 1rem;
+}
+.driver-h2{
+    font-size: .32rem;
+    color: #333;
+    width: 30%;
+    font-weight: bold;
+}
+.driver-h3{
+    font-size: .28rem;
+    color: #999;
+    width: 70%;
+}
+/* 身份证弹窗 */
+.img-upload{
+    position: relative;
+}
+.img-upload .img{
+    width: 100%;
+    margin-top: .5rem;
+    border-radius: .2rem;
+}
+.img-upload .login p{
+    font-size: .3rem;
+    color: #333;
+    margin-top: .1rem;
+}
+.img-upload .pz{
+    width: 90%;
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: #436aa1;
+    height: .8rem;
+    line-height: .8rem;
+    border-radius: .2rem;
+    color: #fff;
+    font-size: .3rem;
+    text-align: center;
+}
+.img-upload .pz input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 100;
+}
+.img-upload .xc{
+    width: 90%;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background-color: #f5f5f5;
+    height: .8rem;
+    line-height: .8rem;
+    border-radius: .2rem;
+    color: #436aa1;
+    font-size: .3rem;
+    text-align: center;
+}
+.img-upload .xc input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 100;
+}
+.img-upload .login-bg{
+    display: none;
+}
+.img-sc{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 0.2rem;
+}
+.img-sc img{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: .5rem;
+}
+.img-sc span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: .24rem;
+    color: #fff;
+}
+.upload-div img:last-child{
+    width: .3rem;
+}
+/* 车辆认证 */
+.clrz-list{
+    margin-bottom: .32rem;
+}
+.clrz-list ul{
+    flex-wrap: wrap;
+}
+.clrz-list>ul>li{
+    margin-bottom: .32rem;
+}
+.clrz-bg{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
+.clrz-div{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 .32rem 0!important;
+}
+.clrz-ul{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 .32rem 0!important;
+}
+.clrz-ul li{
+    width: 90%!important;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+    border-bottom: 1px solid #dfdfdf;
+    color: #000;
+    position: relative;
+}
+.clrz-ul li:first-child{
+    border-top-left-radius: .2rem;
+    border-top-right-radius: .2rem;
+}
+.clrz-ul li:last-child{
+    border-bottom-left-radius: .2rem;
+    border-bottom-right-radius: .2rem;
+}
+.clrz-ul li input{
+    width: 100%;
+    height: 100%;
+    height: .88rem;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.clrz-ul li a{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: block;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    color: #000;
+    font-size: .32rem;
+}
+.clrz-qx{
+    width: 90%!important;
+    height: .88rem;
+    line-height: .88rem;
+    text-align: center;
+    background-color: #fff;
+    margin: 0 auto;
+    color: #000;
+    position: relative;
+    border-radius: .2rem;
+    font-size: .32rem;
+}
+.car-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tg{
+    font-size: .32rem;
+    width: 30%;
+    margin-right: 3%;
+    height: .88rem;
+    line-height: .88rem;
+    background-color: #B9B9B9;
+    color: #fff;
+    text-align: center;
+    border-radius: .6rem;
+}
+.tj{
+    font-size: .32rem;
+    width: 67%;
+    height: .88rem;
+    line-height: .88rem;
+    background-color: #436AA1;
+    color: #fff;
+    text-align: center;
+    border-radius: .6rem;
+}
+/* 扫码 */
+.scancode{
+    background-color: #436AA1;
+    background-image: url(../images/bg1.png);
+    background-size: cover;
+    background-position: center;
+}
+.scancode .nav{
+    background-color: #2F4A71;
+}
+.scancode .nav h2{
+    color: #fff;
+}
+.scancode .nav h2 strong{
+    color: #fff;
+}
+.scancode .nav .xc{
+    color: #fff;
+    font-size: .28rem;
+}
+.scancode>img{
+    position: absolute;
+    top: 46.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.scancode-deng{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.scancode-deng img{
+    width: .4rem;
+    margin-bottom: .2rem;
+}
+.scancode-deng h2{
+    font-size: .28rem;
+    color: #fff;
+}

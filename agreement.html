@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收款授权委托书签字</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/jsignature.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/sign.js"></script>
+    <script src="./js/flashcanvas.js"></script>
+    <script src="./js/jSignature.min.js"></script>
+</head>
+
+<body>
+    <div class="box inspect">
+        <div class="nav">
+            <a><img src="./images/left.png" alt=""></a>
+            <h2><strong>收款授权委托书签字</strong></h2>
+            <a></a>
+        </div>
+        <div class="xy">
+            <div class="xy-name">
+                <h3>司机姓名</h3>
+                <h4>孙宝贵</h4>
+            </div>
+            <div class="xy-name">
+                <h3>手机号</h3>
+                <h4>17509143000</h4>
+            </div>
+            <div class="xy-name">
+                <h3>身份证号</h3>
+                <h4>612726199104203936</h4>
+            </div>
+            <div class="entrust">
+                <h3>我自愿委托</h3>
+                <h2> 刘思仁手机号  13335324360</h2>
+                <h2>身份证号  61270119421008****</h2>
+                <p>代表我本人在湖北天盾电子技术枣阳有限公司网络货运平台上完成运输业务后的收款结算事宜。</p>
+            </div>
+            <div class="xy-name">
+                <h3>委托权限：</h3>
+                <h4>全权委托</h4>
+            </div>
+            <div class="xy-name">
+                <h3>委托时限：</h3>
+                <h4>与使用平台同期</h4>
+            </div>
+            <div class="explain"><p>以上委托事项所产生的法律责任均由本人全部承担。</p></div>
+            <div class="xy-time">2021.1.19</div>
+            <div class="inspect-checkbox">
+                <input type="checkbox" name="" id="huo">
+                <label for="huo">我已阅读并同意以上协议</label>
+            </div>   
+        </div>
+        <a class="ss">下一步</a>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("#signature").jSignature();
+    });
+    function reset() {
+        var $sigdiv = $("#signature");
+        $sigdiv.jSignature("reset");
+    }
+    function outputImage() {
+        var $sigdiv = $("#signature");
+        var datapair = $sigdiv.jSignature("getData", "image"); //设置输出的格式，具体可以参考官方文档
+        console.log(datapair);
+        var imagebase64 = datapair[1].replace(/\+/g, '%2B');
+        console.log('data:image/png;base64,' + imagebase64);
+        /*$.ajax({
+            type: "POST",
+            url: "Default.aspx",
+            data: "image=" + imagebase64,
+            success: function (msg) {
+                var createImage = new Image();
+                createImage.src = msg;
+                $(createImage).appendTo($("#img_src"))
+            }
+        });*/
+
+    }
+    function jSignatureTest() {
+        var $sigdiv = $("#signature");
+        var datapair = $sigdiv.jSignature("getData", "image"); //设置输出的格式，具体可以参考官方文档
+
+        var i = new Image();
+        i.src = "data:" + datapair[0] + "," + datapair[1]
+        $(i).appendTo($("#image")) // append the image (SVG) to DOM.
+    }
+     // 返回
+     $('.nav a img').click(function(){
+        window.history.go(-1)
+    })
+</script>

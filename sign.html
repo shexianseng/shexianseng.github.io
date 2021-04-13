@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收款授权委托书签字</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/jsignature.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/sign.js"></script>
+    <script src="./js/flashcanvas.js"></script>
+    <script src="./js/jSignature.min.js"></script>
+</head>
+
+<body>
+    <div class="box inspect">
+        <div class="nav">
+            <a><img src="./images/left.png" alt=""></a>
+            <h2><strong>收款授权委托书签字</strong></h2>
+            <a></a>
+        </div>
+        <div class="qzmb">
+            <fieldset>
+                <div class='sigWrap'>
+                    <div id="signature" class='signatureWrap'></div>
+                </div>
+            </fieldset>
+            <!-- <button type="button" onclick="jSignatureTest()">
+                输出签名</button>
+            <button type="button" onclick="reset()">
+                重置</button>
+            <button type="button" onclick="outputImage()">
+                生成Image图片</button>
+            <div id="image" style="margin: 20px">
+            </div>
+            <div id="img_src">
+            </div> -->
+        </div>
+        <a onclick="reset()" class="qk">清空</a>
+        <a class="ss">搜索</a>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("#signature").jSignature();
+    });
+    function reset() {
+        var $sigdiv = $("#signature");
+        $sigdiv.jSignature("reset");
+    }
+    function outputImage() {
+        var $sigdiv = $("#signature");
+        var datapair = $sigdiv.jSignature("getData", "image"); //设置输出的格式，具体可以参考官方文档
+        console.log(datapair);
+        var imagebase64 = datapair[1].replace(/\+/g, '%2B');
+        console.log('data:image/png;base64,' + imagebase64);
+        /*$.ajax({
+            type: "POST",
+            url: "Default.aspx",
+            data: "image=" + imagebase64,
+            success: function (msg) {
+                var createImage = new Image();
+                createImage.src = msg;
+                $(createImage).appendTo($("#img_src"))
+            }
+        });*/
+
+    }
+    function jSignatureTest() {
+        var $sigdiv = $("#signature");
+        var datapair = $sigdiv.jSignature("getData", "image"); //设置输出的格式，具体可以参考官方文档
+
+        var i = new Image();
+        i.src = "data:" + datapair[0] + "," + datapair[1]
+        $(i).appendTo($("#image")) // append the image (SVG) to DOM.
+    }
+     // 返回
+     $('.nav a img').click(function(){
+        window.history.go(-1)
+    })
+</script>

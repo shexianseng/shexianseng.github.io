@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>验证码</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="box login-bg">
+        <div class="login register">
+            <h2>登录/注册</h2>
+            <h3>四位数字验证码已发送至 <a>15203201203</a></h3>
+            <div class="codeinput">
+                <input type="tel" maxlength="1" id="tel1" />
+                <i></i>
+                <input type="tel" maxlength="1" />
+                <i></i>
+                <input type="tel" maxlength="1" />
+                <i></i>
+                <input type="tel" maxlength="1" id="tel4" />
+            </div>
+            <input class="hqyzm" onclick="settime(this)" value="获取验证码" />
+            <a class="gb"><img src="./images/gb.png" alt=""></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    var countdown = 60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value = "免费获取验证码";
+            countdown = 60;
+            $('.hqyzm').css('background-color', '#436aa1')
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value = countdown + "秒";
+            countdown--;
+            $('.hqyzm').css('background-color', '#e6e6e6')
+        }
+        setTimeout(function () {
+            settime(obj)
+        }, 1000)
+    }
+    // 每个输入框只能输入一位 输入完成自动聚焦下一输入框
+    // 当输入长度等于6时，输入框失去焦点，自动提交数据，弹出提示框
+    $('#tel1').focus(function () {
+        //第一个input框获得焦点时触发的事件
+        var txts = $(".codeinput input");
+        for (var i = 0; i < txts.length; i++) {
+            var t = txts[i];
+            t.index = i;
+            t.setAttribute("readonly", true);
+            t.onkeyup = function () {
+                this.value = this.value.replace(/^(.).*$/, '$1');
+                var next = this.index + 1;
+                if (next > txts.length - 1) return;
+                txts[next].removeAttribute("readonly");
+                if (this.value) {
+                    txts[next].focus();
+                }
+            }
+        }
+        txts[0].removeAttribute("readonly");
+    });
+    // 第6个input框键盘弹起事件监听
+    $('#tel6').keyup(function () {
+        var mobile = $('#mobile').val();//手机号
+        var codestr = '';//验证码
+        var txts = $(".codeinput input");
+        for (var i = 0; i < txts.length; i++) {
+            codestr += txts[i].value;
+        }
+        if (!mobile) {
+            layer.msg('手机号不能为空！');
+            return false;
+        }
+        if (!/^([1-9])\d{10}$/.test(mobile)) {
+            layer.msg('请输入正确的手机号！');
+            return;
+        }
+        var codestr = '';//验证码
+        var txts = $(".codeinput input");
+        for (var i = 0; i < txts.length; i++) {
+            codestr += txts[i].value;
+        }
+        if (!codestr) {
+            layer.msg('验证码不能为空！');
+            return;
+        }
+        if (codestr.length != 6) {
+            layer.msg('请输入完整6位验证码！');
+            return;
+        }
+        if (!isphonecode) {
+            layer.msg('验证码不存在！');
+            return;
+        }
+        //TODO:后续请求接口业务逻辑
+    });
+    $('.gb').click(function () {
+        $(this).parents('.login-bg').hide()
+    })
+</script>

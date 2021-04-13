@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的车辆</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+    <script src="./js/Firma.js"></script>
+</head>
+
+<body>
+    <div class="box inspect car">
+        <div class="nav">
+            <a><img src="./images/left.png" alt=""></a>
+            <h2><strong>我的车辆</strong></h2>
+            <a></a>
+        </div>
+        <ul class="my-car">
+            <li>
+                <a class="my-car-a">
+                    <img src="./images/car1.png" alt="">
+                </a>
+                <div class="my-car-div">
+                    <div class="my-car-examine">
+                        <h2>鄂D·34528</h2>
+                        <h3><i><img src="./images/cw.png" alt=""></i>审核失败</h3>
+                    </div>
+                    <div class="my-car-modify">
+                        <h2>重型半挂牵引车</h2>
+                        <a class="xg">修改</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <a class="ss">添加车辆</a>
+    </div>
+</body>
+
+</html>
+<script>
+    // 返回
+    $('.nav a img').click(function () {
+        window.history.go(-1)
+    })
+</script>

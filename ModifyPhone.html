@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改手机号</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/rem.js"></script>
+</head>
+
+<body>
+    <div class="box inspect">
+        <div class="nav">
+            <a><img src="./images/left.png" alt=""></a>
+        </div>
+        <ul class="phone-list">
+            <li>
+                <h2>原手机号</h2>
+                <input type="text" value="17509143000">
+            </li>
+            <li>
+                <h2>新手机号</h2>
+                <input type="text" value="请输入新手机号">
+                <input class="hqyzm"  onclick="settime(this)" value="获取验证码" readonly/>
+            </li>
+            <li>
+                <h2>验证码</h2>
+                <input type="text" value="请输入新手机号验证码">
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    setInterval(function () {
+        Date.prototype.Format = function (fmt) { // author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, // 月份
+                "d+": this.getDate(), // 日
+                "h+": this.getHours(), // 小时
+                "m+": this.getMinutes(), // 分
+                "s+": this.getSeconds(), // 秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), // 季度
+                "S": this.getMilliseconds() // 毫秒
+            };
+            if (/(y+)/.test(fmt))
+                fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        var time2 = new Date().Format("yyyy-MM-dd hh:mm:ss");
+        console.log(time2)
+        $('.shipment-time').text(time2)
+    }, 1000)
+</script>
+<script>
+    var countdown = 60;
+    function settime(obj) {
+        if (countdown == 0) {
+            obj.removeAttribute("disabled");
+            obj.value = "免费获取验证码";
+            countdown = 60;
+            return;
+        } else {
+            obj.setAttribute("disabled", true);
+            obj.value = countdown + "秒";
+            countdown--;
+        }
+        setTimeout(function () {
+            settime(obj)
+        }, 1000)
+    }
+    // 返回
+    $('.nav a img').click(function () {
+        window.history.go(-1)
+    })
+</script>
